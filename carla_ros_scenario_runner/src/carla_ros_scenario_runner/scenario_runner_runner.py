@@ -6,7 +6,7 @@
 Executes scenario runner
 """
 import os
-from application_runner import ApplicationRunner  # pylint: disable=relative-import
+from carla_ros_scenario_runner.application_runner import ApplicationRunner  # pylint: disable=relative-import
 
 
 class ScenarioRunnerRunner(ApplicationRunner):

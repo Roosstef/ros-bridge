@@ -19,8 +19,8 @@ except ImportError:
 import rospy
 from carla_ros_scenario_runner_types.srv import ExecuteScenario, ExecuteScenarioResponse
 from carla_ros_scenario_runner_types.msg import CarlaScenarioRunnerStatus
-from application_runner import ApplicationStatus  # pylint: disable=relative-import
-from scenario_runner_runner import ScenarioRunnerRunner  # pylint: disable=relative-import
+from carla_ros_scenario_runner.application_runner import ApplicationStatus
+from carla_ros_scenario_runner.scenario_runner_runner import ScenarioRunnerRunner  # pylint: disable=relative-import
 
 # Check Python dependencies of scenario runner
 try:
@@ -37,7 +37,6 @@ except ImportError:
     print("ERROR: CARLA Python Agents not available. \
         Please add <CARLA_DIR>/PythonAPI/carla to your PYTHONPATH.")
     sys.exit(1)
-
 
 class CarlaRosScenarioRunner(object):
     """
